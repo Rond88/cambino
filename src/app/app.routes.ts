@@ -7,6 +7,7 @@ import { Rxjscomponent } from './components/rxjscomponent/rxjscomponent';
 import { PadreComponent } from './components/padre/padre';
 import { PostListComponent } from './components/post-list/post-list';
 import { UsuarioComponent } from './components/usuario/usuario';
+import { PokemonComponent } from './components/pokemon/pokemon';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -18,6 +19,6 @@ export const routes: Routes = [
     { path: 'rx', component: Rxjscomponent },
     { path: 'padre', component: PadreComponent },
     { path: 'post', component: PostListComponent },
-    { path: 'usuario', component: UsuarioComponent }
-
+    { path: 'usuario', component: UsuarioComponent },
+    { path: 'pokemon', component: PokemonComponent },
 ];
