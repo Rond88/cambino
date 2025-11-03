@@ -22,6 +22,7 @@
                 <li class="nav-item">
                     <a class="nav-link" [class.active]="activeRoute === '/rx'" aria-current="page" href="rx">RxJs</a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -38,6 +39,12 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+                <li>
+                    <a class="nav-link" [class.active]="activeRoute === '/post'" aria-current="page" href="post">Blog</a>
+                </li>
+                <li>
+                    <a class="nav-link" [class.active]="activeRoute === '/usuario'" aria-current="page" href="usuario">Usuario</a>
                 </li>
             </ul>
 

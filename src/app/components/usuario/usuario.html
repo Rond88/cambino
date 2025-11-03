@@ -1,0 +1,10 @@
+<h1>Usuarios</h1>
+
+@for (item of usuarios; track $index) {
+<div>
+    <h3>{{item.name}} ({{item.id}})</h3>
+    <p>{{item.email}}</p>
+    <button (click)="verDatosUsuario(item)">Ver datos</button>
+    <hr>
+</div>
+}
