@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { PokemonService } from '../../services/pokemon-service';
-import { Pokemon, Result } from '../../model/pokemon';
+import { Pokemon, PokemonResult } from '../../model/pokemon';
 @Component({
   selector: 'app-pokemon',
   imports: [],
@@ -8,7 +8,7 @@ import { Pokemon, Result } from '../../model/pokemon';
   styleUrl: './pokemon.css',
 })
 export class PokemonComponent {
-  pokemons = signal<Result[]>([]);
+  pokemons: PokemonResult[] = [];
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit() {
@@ -16,8 +16,8 @@ export class PokemonComponent {
   }
 
   getPokemons() {
-    this.pokemonService.getAllPokemons().subscribe((data: Pokemon) => {
-      this.pokemons.set(data.results);
+    this.pokemonService.getAllPokemons().subscribe((pokemon: Pokemon) => {
+      this.pokemons = pokemon.results;
     });
   }
 }
